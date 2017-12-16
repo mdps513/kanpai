@@ -1,0 +1,21 @@
+extends layout
+
+block content
+
+  //- input#txt(type="text", name="")
+  //- button#send-btn() 送信
+  //- br
+  //- br
+  //- 画像アップロード用
+  //- input#file(type="file")
+  //- button#img-send-btn() 画像送信
+  form(action="/", method="post")
+    div(class="input-group")
+      span(class="input-group-addon" id="basic-addon1") @
+      input(type="text" class="form-control" placeholder="Username" name="user_name", value="")#txt
+    div 
+      button(class="btn btn-primary btn-lg btn-block")#join() ルームに入る
+  //- button#room-send() ルームにだけ送信
+  //- button#leave() ルームから抜ける
+
+  div(class="card")#output
